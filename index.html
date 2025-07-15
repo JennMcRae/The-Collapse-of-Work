@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collapse of Work in Canada: A Visual Breakdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5e3dc; /* Light Beige from brand palette */
+            color: #1e1e1e; /* Dark Gray from brand palette */
+        }
+        .number-stat {
+            font-weight: 900;
+            font-size: 3rem;
+            line-height: 1;
+        }
+        @media (min-width: 768px) {
+            .number-stat {
+                font-size: 4rem;
+            }
+        }
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #d6b8af; /* Beige from brand palette */
+            margin: 0 auto;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Animation delays */
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+        .delay-6 { animation-delay: 1.2s; }
+        .delay-7 { animation-delay: 1.4s; }
+        .delay-8 { animation-delay: 1.6s; }
+
+        /* Brand Colors */
+        .brand-text-dark { color: #1e1e1e; }
+        .brand-text-subtle { color: #5a5a5a; }
+        
+        .brand-stat-1 { color: #2d8f8e; } /* Dark Teal */
+        .brand-stat-2 { color: #6eb5b0; } /* Medium Teal */
+        .brand-stat-3 { color: #f5c518; } /* Yellow */
+        .brand-stat-4 { color: #f4b642; } /* Medium Orange */
+        .brand-stat-5 { color: #e9a939; } /* Dark Orange */
+
+        .brand-highlight-subtraction { color: #f969a2; } /* Pink */
+
+        .brand-conclusion-box-1 {
+            background-color: #e6f4f3; /* Lighter version of teal */
+            border-color: #2d8f8e;
+            color: #1e1e1e;
+        }
+        .brand-conclusion-box-2 {
+            background-color: #fef6e4; /* Lighter version of yellow */
+            border-color: #e9a939;
+            color: #1e1e1e;
+        }
+
+        /* Waffle Chart Styles */
+        .waffle-chart {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 4px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            margin: 1.5rem auto;
+        }
+        .waffle-square {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+        .waffle-traditionally-employed { background-color: #2d8f8e; } /* Dark Teal */
+        .waffle-non-standard { background-color: #f5c518; } /* Yellow */
+        .waffle-unemployed { background-color: #f969a2; } /* Pink */
+        .waffle-not-working { background-color: #d6b8af; } /* Beige */
+    </style>
+</head>
+<body class="text-brand-dark">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-brand-dark mb-2">Only 17.8% of Canadians "Work"</h1>
+            <p class="text-lg md:text-xl brand-text-subtle">This is what the total collapse of the system we call work looks like, based on a back-of-the-napkin calculation.</p>
+        </header>
+
+        <!-- Funnel Visualization -->
+        <div class="space-y-8">
+
+            <!-- Step 1: Total Population -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in delay-1">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="text-center md:text-left md:w-1/3">
+                        <div class="number-stat brand-stat-1">41.5M</div>
+                        <div class="text-xl font-bold mt-1">Total Population</div>
+                        <p class="text-sm brand-text-subtle">The starting point for all of Canada.</p>
+                    </div>
+                    <div class="hidden md:block w-px bg-gray-200 h-24 mx-8"></div>
+                    <div class="flex-1 text-center md:text-left mt-4 md:mt-0">
+                        <p>We begin with the entire population of Canada. From here, we'll narrow down to see who is actually "working" in the traditional sense.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-down fade-in delay-1"></div>
+
+            <!-- Step 2: Working Age Population -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in delay-2">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="text-center md:text-left md:w-1/3">
+                        <div class="number-stat brand-stat-2">27.0M</div>
+                        <div class="text-xl font-bold mt-1">Working Age (15-64)</div>
+                        <p class="text-sm brand-text-subtle">~65% of the total population.</p>
+                    </div>
+                    <div class="hidden md:block w-px bg-gray-200 h-24 mx-8"></div>
+                    <div class="flex-1 text-center md:text-left mt-4 md:mt-0">
+                        <p>First, we remove those not of standard working age (0-14 and 65+). This leaves us with the potential workforce.</p>
+                        <p class="text-sm font-semibold brand-highlight-subtraction mt-2">-14.5M Not of Working Age</p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-down fade-in delay-2"></div>
+
+            <!-- Step 3: Not in Labour Force -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in delay-3">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="text-center md:text-left md:w-1/3">
+                        <div class="number-stat brand-stat-3">17.7M</div>
+                        <div class="text-xl font-bold mt-1">Potential Labour Force</div>
+                        <p class="text-sm brand-text-subtle">After removing non-participants.</p>
+                    </div>
+                    <div class="hidden md:block w-px bg-gray-200 h-24 mx-8"></div>
+                    <div class="flex-1 text-center md:text-left mt-4 md:mt-0">
+                        <p>Of the working-age population, a significant number don't participate in the labour force for various reasons.</p>
+                        <p class="text-sm font-semibold brand-highlight-subtraction mt-2">-9.3M Not Participating (Students, caregivers, retirees, disabled, discouraged workers, etc.)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-down fade-in delay-3"></div>
+            
+            <!-- Step 4: Unemployed -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in delay-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="text-center md:text-left md:w-1/3">
+                        <div class="number-stat brand-stat-4">16.5M</div>
+                        <div class="text-xl font-bold mt-1">Employed Population</div>
+                        <p class="text-sm brand-text-subtle">Actively working in some capacity.</p>
+                    </div>
+                    <div class="hidden md:block w-px bg-gray-200 h-24 mx-8"></div>
+                    <div class="flex-1 text-center md:text-left mt-4 md:mt-0">
+                        <p>Next, we remove those who are officially counted as unemployed—actively looking for work but not finding it.</p>
+                        <p class="text-sm font-semibold brand-highlight-subtraction mt-2">-1.2M Unemployed (by statistical definition)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-down fade-in delay-4"></div>
+
+            <!-- Step 5: Under-employed & Non-Standard -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in delay-5">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="text-center md:text-left md:w-1/3">
+                        <div class="number-stat brand-stat-5">7.5M</div>
+                        <div class="text-xl font-bold mt-1">"Traditionally" Employed</div>
+                        <p class="text-sm brand-text-subtle">The remaining core.</p>
+                    </div>
+                    <div class="hidden md:block w-px bg-gray-200 h-24 mx-8"></div>
+                    <div class="flex-1 text-center md:text-left mt-4 md:mt-0">
+                        <p>Finally, we account for the murky, overlapping categories of people who are working, but not in stable, secure, full-time jobs.</p>
+                        <p class="text-sm font-semibold brand-highlight-subtraction mt-2">-9.0M Under-employed or in Non-Standard Work (Gig work, part-time, self-employed, etc.)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Conclusion -->
+        <section class="mt-16 text-center fade-in delay-7">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-brand-dark">What does this mean?</h2>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div class="brand-conclusion-box-1 border-l-4 p-6 rounded-lg text-left">
+                    <div class="text-5xl font-black">17.9%</div>
+                    <div class="text-xl font-semibold mt-2">of the total population holds a "traditional" job.</div>
+                </div>
+                <div class="brand-conclusion-box-2 border-l-4 p-6 rounded-lg text-left">
+                    <div class="text-5xl font-black">27.6%</div>
+                    <div class="text-xl font-semibold mt-2">of the working-age population holds a "traditional" job.</div>
+                </div>
+            </div>
+            <div class="mt-8 max-w-3xl mx-auto">
+                <p class="text-lg">If "jobs" are defined as 9-to-5, five days a week, with benefits, pensions, and long-term security, this is the reality.</p>
+                <p class="mt-4 text-xl font-bold text-brand-dark">This isn't a "productivity crisis." It's the collapse of the system we call work.</p>
+            </div>
+        </section>
+
+        <!-- Waffle Chart Visualization -->
+        <section class="mt-16 text-center fade-in delay-8">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-brand-dark">The Working-Age Population at a Glance</h2>
+            <p class="mt-2 text-lg brand-text-subtle">Each square represents 1% of the 27M working-age population.</p>
+            <div id="waffle-chart" class="waffle-chart"></div>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4">
+                <div class="flex items-center">
+                    <span class="h-4 w-4 rounded mr-2" style="background-color: #2d8f8e;"></span>
+                    <span>27% 9-5 Traditional Employment</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="h-4 w-4 rounded mr-2" style="background-color: #f5c518;"></span>
+                    <span>33% Non-Standard Employment</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="h-4 w-4 rounded mr-2" style="background-color: #f969a2;"></span>
+                    <span>7% Unemployed</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="h-4 w-4 rounded mr-2" style="background-color: #d6b8af;"></span>
+                    <span>33% Not Working</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-16 text-sm brand-text-subtle">
+            <p>Visualization by Jenn McRae. Calculations are back-of-napkin from StatsCan and other reputable data sources, but for conceptual illustrative purposes only. Read more of Jenn's work at <a href="https://jenniferangelamcrae.substack.com/" class="text-teal-700 hover:underline" target="_blank" rel="noopener noreferrer">https://jenniferangelamcrae.substack.com/</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chart = document.getElementById('waffle-chart');
+            if (chart) {
+                // Corrected percentages to sum to 100%
+                const data = {
+                    traditionallyEmployed: 27,
+                    nonStandard: 33,
+                    unemployed: 7,
+                    notWorking: 33
+                };
+
+                let html = '';
+                for (let i = 0; i < 100; i++) {
+                    let categoryClass = '';
+                    if (i < data.traditionallyEmployed) {
+                        categoryClass = 'waffle-traditionally-employed';
+                    } else if (i < data.traditionallyEmployed + data.nonStandard) {
+                        categoryClass = 'waffle-non-standard';
+                    } else if (i < data.traditionallyEmployed + data.nonStandard + data.unemployed) {
+                        categoryClass = 'waffle-unemployed';
+                    } else {
+                        categoryClass = 'waffle-not-working';
+                    }
+                    html += `<div class="waffle-square ${categoryClass}"></div>`;
+                }
+                chart.innerHTML = html;
+            }
+        });
+    </script>
+</body>
+</html>
